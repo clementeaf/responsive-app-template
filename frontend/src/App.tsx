@@ -8,13 +8,15 @@ import { routes } from './routes';
  */
 function App(): ReactElement {
   return (
-    <BrowserRouter>
-      <Routes>
-        {routes.map((route) => (
-          <Route key={route.path} path={route.path} element={route.element} />
-        ))}
-      </Routes>
-    </BrowserRouter>
+    <div className="w-screen h-screen">
+      <BrowserRouter>
+        <Routes>
+          {routes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
