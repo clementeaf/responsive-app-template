@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import Landing from './pages/Landing';
 
 /**
  * Interfaz que define la estructura de una ruta
@@ -12,7 +13,13 @@ export interface RouteConfig {
 /**
  * Objeto que contiene todas las rutas de la aplicación
  */
-export const routes: RouteConfig[] = [];
+export const routes: RouteConfig[] = [
+  {
+    path: '/landing',
+    name: 'landing',
+    element: <Landing />,
+  },
+];
 
 /**
  * Obtiene una ruta por su path
